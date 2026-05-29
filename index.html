@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doña Creative Collective — Miami</title>
+  <meta name="description" content="Doña Creative Collective is a Miami-based creative collective led by Daniela Calderon — specializing in branding, creative direction, partnerships, sponsorship, and luxury event production." />
+  <meta name="keywords" content="creative collective, luxury events, experiential design, Miami, brand strategy, partnerships, event production, Daniela Calderon, Art Basel, Formula 1" />
+  <meta property="og:title" content="Doña Creative Collective" />
+  <meta property="og:description" content="Most brands don't need another agency. They need someone already inside the worlds they want to be in." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://donacreative.com" />
+  <link rel="canonical" href="https://donacreative.com" />
+
+  <style>
+    /* ─── FONTS ─── */
+    @font-face {
+      font-family: 'CanelaDeck';
+      src: url('FONTS/Canela Fonts for Titles and Headings/CanelaDeck-Light-Trial.otf') format('opentype');
+      font-weight: 300; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'CanelaDeck';
+      src: url('FONTS/Canela Fonts for Titles and Headings/CanelaDeck-LightItalic-Trial.otf') format('opentype');
+      font-weight: 300; font-style: italic; font-display: swap;
+    }
+    @font-face {
+      font-family: 'CanelaDeck';
+      src: url('FONTS/Canela Fonts for Titles and Headings/CanelaDeck-Regular-Trial.otf') format('opentype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'CanelaDeck';
+      src: url('FONTS/Canela Fonts for Titles and Headings/CanelaDeck-RegularItalic-Trial.otf') format('opentype');
+      font-weight: 400; font-style: italic; font-display: swap;
+    }
+    @font-face {
+      font-family: 'CanelaDeck';
+      src: url('FONTS/Canela Fonts for Titles and Headings/CanelaDeck-Medium-Trial.otf') format('opentype');
+      font-weight: 500; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'CourierNew';
+      src: url('FONTS/Courier New Font for Body/Courier New Regular/Courier New Regular.ttf') format('truetype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'CourierNew';
+      src: url('FONTS/Courier New Font for Body/Courier New Italic/Courier New Italic.ttf') format('truetype');
+      font-weight: 400; font-style: italic; font-display: swap;
+    }
+    @font-face {
+      font-family: 'CourierNew';
+      src: url('FONTS/Courier New Font for Body/Courier New Bold/Courier New Bold.ttf') format('truetype');
+      font-weight: 700; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Maritim';
+      src: url('FONTS/Maritim for Script/Maritim-Regular.otf') format('opentype');
+      font-weight: 400; font-style: normal; font-display: swap;
+    }
+
+    /* ─── CUSTOM PROPERTIES ─── */
+    :root {
+      --cream:       #F0E8D5;
+      --parchment:   #EAE0C8;
+      --cream-dark:  #E0D5B8;
+      --burgundy:    #5C1212;
+      --burgundy-mid:#6E1616;
+      --powder-blue: #C8D9E6;
+      --blue-mid:    #8FAFC9;
+      --near-black:  #1A0808;
+      --warm-gray:   #7A6858;
+      --divider:     rgba(92,18,18,0.18);
+
+      --font-display: 'CanelaDeck', 'Times New Roman', serif;
+      --font-body:    'CourierNew', 'Courier New', monospace;
+      --font-script:  'Maritim', cursive;
+
+      --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* ─── RESET ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--cream);
+      color: var(--near-black);
+      font-family: var(--font-body);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    ::selection { background: var(--burgundy); color: var(--cream); }
+
+    /* ─── SCROLL ANIMATIONS ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.85s var(--ease-out), transform 0.85s var(--ease-out);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left  { opacity: 0; transform: translateX(-36px); transition: opacity 0.85s var(--ease-out), transform 0.85s var(--ease-out); }
+    .reveal-left.visible  { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(36px);  transition: opacity 0.85s var(--ease-out), transform 0.85s var(--ease-out); }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.22s; }
+    .d3 { transition-delay: 0.36s; }
+    .d4 { transition-delay: 0.5s; }
+    .d5 { transition-delay: 0.65s; }
+
+    /* ─── SHARED LAYOUT ─── */
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 3rem; }
+    .pad  { padding-top: 7rem; padding-bottom: 7rem; }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+      padding: 1.5rem 3rem;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background 0.45s var(--ease-out), padding 0.35s var(--ease-out), box-shadow 0.35s;
+    }
+    nav.scrolled {
+      background: rgba(240,232,213,0.97);
+      backdrop-filter: blur(10px);
+      padding: 1rem 3rem;
+      box-shadow: 0 1px 0 var(--divider);
+    }
+  .nav-wordmark {
+  height: 160px;
+}
+nav.scrolled .nav-wordmark { 
+  height: 120px;
+}
+.nav-wordmark {
+  height: 160px;
+  width: auto;
+  max-width: 280px;  /* ← add this */
+  mix-blend-mode: multiply;
+  opacity: 0.92;
+  transition: height 0.35s var(--ease-out);
+}
+    }
+    nav.scrolled .nav-wordmark { height: 80px; }
+    .nav-links { display: flex; gap: 2.5rem; align-items: center; }
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 0.55; }
+    .nav-cta {
+      border: 1px solid var(--burgundy) !important;
+      padding: 0.5rem 1.25rem !important;
+      transition: background 0.3s, color 0.3s, opacity 0.3s !important;
+    }
+    .nav-cta:hover { background: var(--burgundy) !important; color: var(--cream) !important; opacity: 1 !important; }
+    .nav-toggle {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px;
+    }
+    .nav-toggle span { display: block; width: 24px; height: 1px; background: var(--burgundy); transition: 0.3s; }
+
+    /* ─── MOBILE MENU ─── */
+    .mobile-menu {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: var(--cream);
+      flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--font-display); font-weight: 300; font-size: 2.2rem; color: var(--burgundy); }
+    .mobile-menu-close {
+      position: absolute; top: 1.75rem; right: 2rem;
+      font-family: var(--font-body); font-size: 0.6rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--burgundy); cursor: pointer; opacity: 0.55;
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION 1 — HERO
+    ═══════════════════════════════════════ */
+    #hero {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    #hero img.hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION 2 — MANIFESTO
+    ═══════════════════════════════════════ */
+    #manifesto {
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .manifesto-brush-left {
+      position: absolute;
+      left: -3%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22vw;
+      max-width: 280px;
+      opacity: 0.09;
+      pointer-events: none;
+      mix-blend-mode: multiply;
+    }
+    .manifesto-brush-right {
+      position: absolute;
+      right: -3%;
+      top: 50%;
+      transform: translateY(-50%) rotate(180deg);
+      width: 22vw;
+      max-width: 280px;
+      opacity: 0.09;
+      pointer-events: none;
+      mix-blend-mode: multiply;
+    }
+    .manifesto-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 8rem 3rem;
+      text-align: center;
+    }
+    .manifesto-rule {
+      width: 48px; height: 1px;
+      background: var(--burgundy); opacity: 0.4;
+      margin: 0 auto 3rem;
+    }
+    h2.manifesto-headline {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.15;
+      color: var(--burgundy);
+      letter-spacing: -0.02em;
+      margin-bottom: 2.5rem;
+    }
+    h2.manifesto-headline em { font-style: italic; }
+    .manifesto-body {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      line-height: 1.95;
+      color: var(--near-black);
+      opacity: 0.72;
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.02em;
+    }
+    .manifesto-signature {
+      font-family: var(--font-script);
+      font-size: 1.6rem;
+      color: var(--burgundy);
+      opacity: 0.55;
+      line-height: 1;
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION 3 — THE SHORT VERSION
+    ═══════════════════════════════════════ */
+    #about {
+      background: var(--parchment);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      min-height: 600px;
+    }
+    .about-content {
+      padding: 7rem 4rem 7rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .about-wordmark {
+      width: 200px;
+      mix-blend-mode: multiply;
+      opacity: 0.85;
+      margin-bottom: 3rem;
+    }
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      opacity: 0.6;
+      margin-bottom: 1.25rem;
+    }
+    .section-rule {
+      width: 40px; height: 1px;
+      background: var(--burgundy);
+      opacity: 0.3;
+      margin-bottom: 2rem;
+    }
+    .about-body p {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      line-height: 1.95;
+      color: var(--near-black);
+      opacity: 0.75;
+      margin-bottom: 1.25rem;
+    }
+    .about-body p:last-child { margin-bottom: 0; }
+    .about-image {
+      position: relative;
+      overflow: hidden;
+    }
+    .about-image img {
+      width: 100;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .about-image-fallback {
+      width: 100%;
+      height: 100%;
+      min-height: 500px;
+      background: var(--cream-dark);
+      background-image: url('about-image.png');}
+
+    /* ═══════════════════════════════════════
+       SECTION 4 — WHAT WE DO
+    ═══════════════════════════════════════ */
+    #services {
+      background: var(--powder-blue);
+    }
+    .services-header {
+      margin-bottom: 5rem;
+    }
+    .services-main-title {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      color: var(--near-black);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+    .services-main-title em { font-style: italic; }
+    .services-intro {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      color: var(--near-black);
+      opacity: 0.6;
+      max-width: 480px;
+    }
+    .services-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-top: 1px solid rgba(26,8,8,0.15);
+    }
+    .service-row {
+      display: grid;
+      grid-template-columns: 80px 1fr 1.8fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 2.75rem 0;
+      border-bottom: 1px solid rgba(26,8,8,0.12);
+      transition: background 0.3s;
+    }
+    .service-row:hover { background: rgba(255,255,255,0.2); margin: 0 -3rem; padding: 2.75rem 3rem; }
+    .service-motif-img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      opacity: 0.7;
+    }
+    .service-motif-img.dark-bg { mix-blend-mode: screen; }
+    .service-title-block { padding-right: 2rem; }
+    .service-num {
+      font-family: var(--font-body);
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      color: var(--near-black);
+      opacity: 0.4;
+      margin-bottom: 0.4rem;
+    }
+    .service-name {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--near-black);
+    }
+    .service-desc {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      line-height: 1.8;
+      color: var(--near-black);
+      opacity: 0.6;
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION 5 — WHO WE WORK WITH
+    ═══════════════════════════════════════ */
+    #who {
+      background: var(--parchment);
+    }
+    .who-header {
+      margin-bottom: 4rem;
+    }
+    .who-main-title {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2.5rem, 4.5vw, 4rem);
+      color: var(--burgundy);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .who-main-title em { font-style: italic; }
+    .who-underline {
+      width: 80px; height: 3px;
+      background: var(--burgundy);
+      margin-top: 1rem;
+      opacity: 0.35;
+    }
+    .who-cards {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+    }
+    .who-card {
+      display: flex;
+      flex-direction: column;
+    }
+    .who-card-img {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+    }
+    .who-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-out);
+    }
+    .who-card:hover .who-card-img img { transform: scale(1.04); }
+    .who-card-img-fallback {
+      width: 100%;
+      height: 100%;
+      background: var(--cream-dark);
+    }
+    .who-card-label {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      margin-bottom: 0.5rem;
+    }
+    .who-card-desc {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      line-height: 1.7;
+      color: var(--near-black);
+      opacity: 0.6;
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION 6 — WHO WE'VE WORKED WITH
+    ═══════════════════════════════════════ */
+    #clients {
+      background: var(--parchment);
+      border-top: 1px solid var(--divider);
+    }
+    .clients-title {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      color: var(--burgundy);
+      letter-spacing: -0.02em;
+      margin-bottom: 3.5rem;
+      line-height: 1.15;
+    }
+    .clients-title em { font-style: italic; }
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--divider);
+      border-left: 1px solid var(--divider);
+    }
+    .client-item {
+      border-right: 1px solid var(--divider);
+      border-bottom: 1px solid var(--divider);
+      padding: 1.6rem 1.5rem;
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      opacity: 0.6;
+      transition: opacity 0.25s, background 0.25s;
+    }
+    .client-item:hover { opacity: 1; background: rgba(92,18,18,0.04); }
+    .clients-more {
+      margin-top: 2.5rem;
+      text-align: right;
+      font-family: var(--font-script);
+      font-size: 1.4rem;
+      color: var(--burgundy);
+      opacity: 0.4;
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION 7 — THE WORK
+    ═══════════════════════════════════════ */
+    #work {
+      background: var(--burgundy);
+    }
+    .work-header {
+      margin-bottom: 4rem;
+    }
+    .work-main-title {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      color: var(--cream);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+    .work-main-title em { font-style: italic; }
+    /* Photo grid — 2 rows × 3 cols */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-bottom: 6rem;
+    }
+    .work-grid-item {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      cursor: pointer;
+    }
+    .work-grid-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-out);
+      filter: brightness(0.85);
+    }
+    .work-grid-item:hover img { transform: scale(1.04); filter: brightness(1); }
+    .work-grid-item-label {
+      position: absolute;
+      bottom: 1rem; left: 1rem;
+      font-family: var(--font-body);
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .work-grid-item:hover .work-grid-item-label { opacity: 0.8; }
+/* ── Case study carousel ── */
+.case-carousel {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+
+.case-slide {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  height: 620px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s var(--ease-out);
+}
+
+.case-slide.active {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  animation: caseFadeIn 0.45s var(--ease-out) both;
+}
+
+.case-slide:nth-child(even) .case-img { order: 2; }
+.case-slide:nth-child(even) .case-content { order: 1; }
+
+.case-img {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.case-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease-out);
+}
+
+.case-slide.active .case-img img {
+  transform: scale(1);
+}
+
+.case-content {
+  background: var(--powder-blue);
+  padding: 4rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.case-content::-webkit-scrollbar {
+  display: none;
+}
+
+.case-num {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 4rem;
+  color: var(--near-black);
+  opacity: 0.12;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.case-tags-row {
+  font-family: var(--font-body);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--near-black);
+  opacity: 0.5;
+  margin-bottom: 0.75rem;
+  flex-shrink: 0;
+}
+
+.case-name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.5vw, 2.4rem);
+  color: var(--near-black);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.case-client {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--near-black);
+  opacity: 0.6;
+  margin-bottom: 2rem;
+  flex-shrink: 0;
+}
+
+.case-block {
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.case-block-label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--near-black);
+  opacity: 0.5;
+  margin-bottom: 0.4rem;
+}
+
+.case-block-text {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  line-height: 1.85;
+  color: var(--near-black);
+  opacity: 0.7;
+}
+
+/* ── Carousel controls ── */
+.case-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3.5rem;
+  background: var(--burgundy);
+  position: relative;
+  z-index: 2;
+}
+
+.case-arrows {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.case-arrow {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(240,232,213,0.3);
+  background: transparent;
+  color: var(--cream);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: background 0.25s, border-color 0.25s;
+  font-family: var(--font-body);
+}
+
+.case-arrow:hover {
+  background: rgba(240,232,213,0.12);
+  border-color: rgba(240,232,213,0.6);
+}
+
+.case-counter {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: rgba(240,232,213,0.5);
+}
+
+.case-counter span {
+  color: var(--cream);
+}
+
+.case-dots {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.case-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(240,232,213,0.25);
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s;
+  border: none;
+  padding: 0;
+}
+
+.case-dot.active {
+  background: var(--cream);
+  transform: scale(1.3);
+}
+
+@keyframes caseFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1024px) {
+  .case-slide {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .case-slide.active {
+    height: auto;
+  }
+  .case-slide:nth-child(even) .case-img { order: 1; }
+  .case-slide:nth-child(even) .case-content { order: 2; }
+  .case-img {
+    height: 300px;
+  }
+  .case-content {
+    height: auto;
+    max-height: 420px;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .case-slide {
+    height: auto;
+  }
+  .case-img {
+    height: 240px;
+  }
+  .case-content {
+    padding: 3rem 1.5rem;
+    max-height: 380px;
+    overflow-y: auto;
+  }
+  .case-controls {
+    padding: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .case-dots { display: none; }
+}
+
+
+    /* ═══════════════════════════════════════
+       SECTION 8 — MEET THE FOUNDER
+    ═══════════════════════════════════════ */
+    #founder {
+      background: var(--parchment);
+    }
+    .founder-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+    .founder-content { order: 1; }
+    .founder-label {
+      font-family: var(--font-body);
+      font-style: italic;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      color: var(--warm-gray);
+      margin-bottom: 1.5rem;
+    }
+    .founder-name {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      color: var(--burgundy);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 2.5rem;
+    }
+    .founder-bio p {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      line-height: 1.95;
+      color: var(--near-black);
+      opacity: 0.72;
+      margin-bottom: 1.25rem;
+    }
+    .founder-bio p:last-child { margin-bottom: 0; }
+    .founder-img-wrap { order: 2; position: relative; }
+    .founder-img-wrap img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top center;
+      filter: grayscale(0.2);
+    }
+    .founder-img-accent {
+      position: absolute;
+      top: -1.2rem; right: -1.2rem;
+      width: calc(100% + 1.2rem);
+      height: calc(100% + 1.2rem);
+      border: 1px solid var(--divider);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .founder-img-wrap img { position: relative; z-index: 1; }
+
+    /* ═══════════════════════════════════════
+       SECTION 9 — HOW WE WORK
+    ═══════════════════════════════════════ */
+#how {
+  background: var(--powder-blue);
+  padding: 8rem 4rem;
+}
+
+.how-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.how-header {
+  margin-bottom: 5rem;
+}
+
+.how-section-label {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-bottom: 1.25rem;
+}
+
+.how-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  color: var(--burgundy);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.how-title em {
+  font-style: italic;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.how-step {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(107, 30, 42, 0.2);
+}
+
+.how-step-number {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--burgundy);
+  opacity: 0.5;
+}
+
+.how-step-title {
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  font-weight: 600;
+}
+
+.how-step-body {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.95;
+  color: var(--near-black);
+  opacity: 0.75;
+}
+
+@media (max-width: 768px) {
+  #how {
+    padding: 6rem 2rem;
+  }
+
+  .how-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .how-header {
+    margin-bottom: 3.5rem;
+  }
+}
+    /* ═══════════════════════════════════════
+       SECTION 10 — CONTACT
+    ═══════════════════════════════════════ */
+    #contact {
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    /* subtle texture */
+    #contact::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('DOÑA PATTERNS %26 ASSETS/3.png');
+      background-size: cover;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    .contact-inner {
+      position: relative;
+      z-index: 2;
+    }
+    /* Motif row */
+    .contact-motifs {
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+      align-items: flex-end;
+      margin-bottom: 3.5rem;
+    }
+    .contact-motifs img {
+      width: 64px;
+      opacity: 0.55;
+      mix-blend-mode: multiply;
+    }
+    .contact-motifs img.dark { mix-blend-mode: screen; opacity: 0.45; }
+    .contact-rule { width: 100%; height: 1px; background: var(--burgundy); opacity: 0.18; margin-bottom: 3rem; }
+    .contact-closing {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(1.6rem, 3vw, 2.8rem);
+      color: var(--burgundy);
+      text-align: center;
+      line-height: 1.3;
+      margin-bottom: 3rem;
+      letter-spacing: -0.01em;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact-rule-2 { width: 100%; height: 1px; background: var(--burgundy); opacity: 0.18; margin-bottom: 3rem; }
+
+    /* Form layout */
+    .contact-form-wrap {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .form-success {
+      display: none;
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--burgundy);
+      text-align: center;
+      padding: 3rem 0;
+      line-height: 1.5;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 2rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 1.75rem;
+    }
+    .form-group label {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      margin-bottom: 0.5rem;
+      opacity: 0.75;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      color: var(--near-black);
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--burgundy);
+      padding: 0.65rem 0;
+      outline: none;
+      width: 100%;
+      letter-spacing: 0.02em;
+      transition: border-color 0.3s, border-width 0.3s;
+      -webkit-appearance: none;
+      border-radius: 0;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(92,18,18,0.3); font-size: 0.82rem; }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-bottom: 2px solid var(--burgundy); }
+    .form-group select { cursor: pointer; background: transparent; color: var(--near-black); }
+    .form-group select option { background: var(--cream); }
+    .form-group textarea { resize: none; height: 90px; }
+
+    .btn-submit {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 1rem 2.8rem;
+      background: var(--burgundy);
+      color: var(--cream);
+      border: 1px solid var(--burgundy);
+      cursor: pointer;
+      align-self: center;
+      margin-top: 1rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    .btn-submit:hover { background: transparent; color: var(--burgundy); }
+
+    .contact-email-line {
+      text-align: center;
+      margin-top: 3.5rem;
+    }
+    .contact-email-label {
+      font-family: var(--font-body);
+      font-size: 0.58rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+      margin-bottom: 0.4rem;
+    }
+    .contact-email-link {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--burgundy);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      text-decoration-color: rgba(92,18,18,0.3);
+      transition: text-decoration-color 0.3s;
+    }
+    .contact-email-link:hover { text-decoration-color: var(--burgundy); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--near-black);
+      padding: 2.5rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-wordmark {
+      height: 44px;
+      filter: invert(1) brightness(0.75) sepia(0.1);
+      opacity: 0.65;
+    }
+    .footer-center {
+      font-family: var(--font-body);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(240,232,213,0.25);
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .footer-links a {
+      font-family: var(--font-body);
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(240,232,213,0.3);
+      transition: color 0.25s;
+    }
+    .footer-links a:hover { color: rgba(240,232,213,0.75); }
+
+    /* ─── UTILITY ─── */
+    .btn {
+      font-family: var(--font-body);
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 0.9rem 2.2rem;
+      cursor: pointer;
+      display: inline-block;
+      transition: all 0.3s var(--ease-out);
+    }
+    .btn-primary { background: var(--burgundy); color: var(--cream); border: 1px solid var(--burgundy); }
+    .btn-primary:hover { background: transparent; color: var(--burgundy); }
+    .btn-secondary { background: transparent; color: var(--burgundy); border: 1px solid var(--burgundy); }
+    .btn-secondary:hover { background: var(--burgundy); color: var(--cream); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .who-cards { grid-template-columns: repeat(3, 1fr); }
+      .clients-grid { grid-template-columns: repeat(3, 1fr); }
+      .case-study { grid-template-columns: 1fr; min-height: auto; }
+      .case-study:nth-child(even) { direction: ltr; }
+      .case-img { aspect-ratio: 16/9; }
+      .work-grid { grid-template-columns: repeat(2, 1fr); }
+      .founder-grid { gap: 3rem; }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      nav.scrolled { padding: 0.75rem 1.5rem; }
+      .nav-wordmark { height: 72px; }
+      nav.scrolled .nav-wordmark { height: 56px; }
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+      .wrap { padding: 0 1.5rem; }
+      .pad  { padding-top: 5rem; padding-bottom: 5rem; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-image { min-height: 380px; }
+      .about-content { padding: 4rem 1.5rem; }
+      .who-cards { grid-template-columns: repeat(2, 1fr); }
+      .clients-grid { grid-template-columns: repeat(2, 1fr); }
+      .work-grid { grid-template-columns: 1fr; }
+      .founder-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .founder-content { order: 2; }
+      .founder-img-wrap { order: 1; }
+      .service-row { grid-template-columns: 1fr; gap: 0.75rem; padding: 2rem 0; }
+      .service-row:hover { margin: 0; padding: 2rem 0; }
+      .form-row { grid-template-columns: 1fr; gap: 0; }
+      .contact-motifs { gap: 1.5rem; }
+      .contact-motifs img { width: 48px; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+      .how-card { padding: 3.5rem 2rem; width: calc(100% - 3rem); }
+      .manifesto-inner { padding: 5rem 1.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      .who-cards { grid-template-columns: 1fr 1fr; }
+      .clients-grid { grid-template-columns: 1fr 1fr; }
+      .work-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── MOBILE MENU ─── -->
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="mobile-menu-close" onclick="closeMobileMenu()">Close</span>
+    <a href="#about"    onclick="closeMobileMenu()">About</a>
+    <a href="#services" onclick="closeMobileMenu()">Services</a>
+    <a href="#work"     onclick="closeMobileMenu()">Work</a>
+    <a href="#contact"  onclick="closeMobileMenu()">Contact</a>
+  </div>
+
+  <!-- ─── NAV ─── -->
+  <nav id="navbar">
+    <img class="nav-wordmark"
+         src="LOGOS/WORDMARK.png"
+         alt="Doña Creative Collective" />
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+    <div class="nav-toggle" onclick="openMobileMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 1 — HERO
+  ═══════════════════════════════════════ -->
+  <section id="hero" aria-label="Hero">
+    <img class="hero-img"
+         src="Hero-Image.jpg"
+         alt="Doña Creative Collective"
+         fetchpriority="high" />
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 2 — MANIFESTO
+  ═══════════════════════════════════════ -->
+  <section id="manifesto">
+    <img class="manifesto-brush-left"
+         src="DOÑA PATTERNS %26 ASSETS/4.png"
+         alt="" aria-hidden="true" />
+    <img class="manifesto-brush-right"
+         src="DOÑA PATTERNS %26 ASSETS/6.png"
+         alt="" aria-hidden="true" />
+
+    <div class="manifesto-inner">
+      <div class="manifesto-rule reveal"></div>
+      <h2 class="manifesto-headline reveal d1">
+        Most brands don't need <em>another</em> agency.
+      </h2>
+      <p class="manifesto-body reveal d2">
+        They need someone embedded in their team. Someone already inside the worlds they want to be in, who knows the rooms, the people, and what fits.<br /><br />
+        That's the brief Doña was built for.
+      </p>
+      <span class="manifesto-signature reveal d3">I've been on both sides of this.</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 3 — THE SHORT VERSION
+  ═══════════════════════════════════════ -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-content">
+        <p class="section-label reveal-left d1">The Short Version</p>
+        <div class="section-rule reveal-left d1"></div>
+        <div class="about-body">
+          <p class="reveal-left d2">We are a creative collective, assembled per brief, built from inside the worlds our clients live in.</p>
+          <p class="reveal-left d3">We design the alignment between brands, spaces, stories, and the people who matter most to them.</p>
+          <p class="reveal-left d4">Branding, creative direction, partnerships, sponsorship, experiential, production — whatever the work actually needs.</p>
+        </div>
+      </div>
+      <div class="about-image reveal-right">
+        <!-- Editorial image placeholder using brand pattern until actual image added -->
+        <div class="about-image-fallback" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 4 — WHAT WE DO
+  ═══════════════════════════════════════ -->
+  <section id="services">
+    <div class="wrap pad">
+      <div class="services-header">
+        <p class="section-label reveal">What We Do</p>
+        <h2 class="services-main-title reveal d1">What <em>We Do</em></h2>
+        <p class="services-intro reveal d2">Three areas. Engaged together or separately. Whichever the brief calls for.</p>
+      </div>
+
+      <div class="services-pillars">
+        <div class="service-row reveal">
+          <img class="service-motif-img"
+               src="MOTIFS/HAT MOTIF.png"
+               alt="" aria-hidden="true" />
+          <div class="service-title-block">
+            <div class="service-num">01</div>
+            <div class="service-name">Branding &amp; Creative Direction</div>
+          </div>
+          <p class="service-desc">
+            Brand strategy · Brand identity · Creative direction · Content strategy · Social media
+          </p>
+        </div>
+        <div class="service-row reveal d2">
+          <img class="service-motif-img"
+               src="MOTIFS/LIONESS MOTIF.png"
+               alt="" aria-hidden="true" />
+          <div class="service-title-block">
+            <div class="service-num">02</div>
+            <div class="service-name">Partnerships &amp; Sponsorship</div>
+          </div>
+          <p class="service-desc">
+            Partnership development · Sponsorship strategy · Sponsorship sales · Sponsor activation · Talent &amp; influencer
+          </p>
+        </div>
+        <div class="service-row reveal d3">
+          <img class="service-motif-img dark-bg"
+               src="MOTIFS/FAN MOTIF.png"
+               alt="" aria-hidden="true"
+               style="mix-blend-mode: screen; filter: brightness(0.7) sepia(0.2);" />
+          <div class="service-title-block">
+            <div class="service-num">03</div>
+            <div class="service-name">Experiences &amp; Production</div>
+          </div>
+          <p class="service-desc">
+            Experiential design · Event production · Venue scouting · Programming · VIP &amp; hospitality · Activations
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 5 — WHO WE WORK WITH
+  ═══════════════════════════════════════ -->
+  <section id="who">
+    <div class="wrap pad">
+      <div class="who-header">
+        <h2 class="who-main-title reveal">Who <em>We Work With</em></h2>
+        <div class="who-underline reveal d1"></div>
+      </div>
+
+      <div class="who-cards">
+        <div class="who-card reveal">
+          <div class="who-card-img">
+            <img src="Images/worlds-01-luxury-hospitality.jpg"
+                 alt="Luxury Hospitality"
+                 loading="lazy"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <div class="who-card-img-fallback" style="display:none;"></div>
+          </div>
+          <p class="who-card-label">Luxury Hospitality</p>
+          <p class="who-card-desc">Hotels, resorts, yacht collections, private venues.</p>
+        </div>
+        <div class="who-card reveal d1">
+          <div class="who-card-img">
+            <img src="Images/worlds-02-fashion-lifestyle.jpg"
+                 alt="Fashion &amp; Lifestyle"
+                 loading="lazy"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <div class="who-card-img-fallback" style="display:none;"></div>
+          </div>
+          <p class="who-card-label">Fashion &amp; Lifestyle</p>
+          <p class="who-card-desc">Emerging brands finding their world. Established brands finding the next chapter.</p>
+        </div>
+        <div class="who-card reveal d2">
+          <div class="who-card-img">
+            <img src="Images/worlds-03-motorsport-culture.jpg"
+                 alt="Motorsport &amp; Culture"
+                 loading="lazy"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <div class="who-card-img-fallback" style="display:none;"></div>
+          </div>
+          <p class="who-card-label">Motorsport &amp; Culture</p>
+          <p class="who-card-desc">F1, Monaco, fútbol, the rooms that form around them.</p>
+        </div>
+        <div class="who-card reveal d3">
+          <div class="who-card-img">
+            <img src="Images/worlds-04-wellness-longevity..jpg"
+                 alt="Wellness &amp; Longevity"
+                 loading="lazy"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <div class="who-card-img-fallback" style="display:none;"></div>
+          </div>
+          <p class="who-card-label">Wellness &amp; Longevity</p>
+          <p class="who-card-desc">The brands redefining what it means to take care of yourself.</p>
+        </div>
+        <div class="who-card reveal d4">
+          <div class="who-card-img">
+            <img src="Images/worlds-05-art-cultural.jpg"
+                 alt="Art &amp; Cultural Platforms"
+                 loading="lazy"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+            <div class="who-card-img-fallback" style="display:none;"></div>
+          </div>
+          <p class="who-card-label">Art &amp; Cultural Platforms</p>
+          <p class="who-card-desc">Installations, Art Basel, collector environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 6 — WHO WE'VE WORKED WITH
+  ═══════════════════════════════════════ -->
+  <section id="clients">
+    <div class="wrap pad">
+      <h2 class="clients-title reveal">Who We've <em>Worked With</em></h2>
+
+      <div class="clients-grid">
+        <div class="client-item reveal">The Ritz-Carlton</div>
+        <div class="client-item reveal d1">Citi</div>
+        <div class="client-item reveal d2">Nu Bank</div>
+        <div class="client-item reveal d3">Hedley Studios</div>
+        <div class="client-item reveal">Imperial Moto</div>
+        <div class="client-item reveal d1">IMG</div>
+        <div class="client-item reveal d2">Moët Hennessy</div>
+        <div class="client-item reveal d3">Riviera Dining Group</div>
+        <div class="client-item reveal">BetPlay</div>
+        <div class="client-item reveal d1">Moutonière</div>
+        <div class="client-item reveal d2">Miami Concours</div>
+        <div class="client-item reveal d3">Neiman Marcus</div>
+        <div class="client-item reveal">Formula 1</div>
+        <div class="client-item reveal d1">The Standard</div>
+        <div class="client-item reveal d2">The Surf Lodge</div>
+        <div class="client-item reveal d3">José Andrés Group</div>
+      </div>
+
+      <p class="clients-more reveal">and more…</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 7 — THE WORK
+  ═══════════════════════════════════════ -->
+  <section id="work">
+    <div class="wrap" style="padding-top: 7rem; padding-bottom: 4rem;">
+      <div class="work-header">
+        <h2 class="work-main-title reveal">The <em>Work</em></h2>
+      </div>
+
+      <!-- Photo grid — first 6 projects -->
+      <div class="work-grid">
+        <div class="work-grid-item reveal">
+          <img src="Images/work-01-ritz-art-basel.jpg" alt="The New Current — Ritz-Carlton Art Basel" loading="lazy" />
+          <span class="work-grid-item-label">The New Current</span>
+        </div>
+        <div class="work-grid-item reveal d1">
+          <img src="Images/work-02-miami-concours.jpg" alt="Miami Concours" loading="lazy" />
+          <span class="work-grid-item-label">Miami Concours</span>
+        </div>
+        <div class="work-grid-item reveal d2">
+          <img src="Images/work-03-moutoniere.jpg" alt="Moutonière" loading="lazy" />
+          <span class="work-grid-item-label">Moutonière</span>
+        </div>
+        <div class="work-grid-item reveal">
+          <img src="Images/work-04-body-language.jpg" alt="Body Language" loading="lazy" />
+          <span class="work-grid-item-label">Body Language</span>
+        </div>
+        <div class="work-grid-item reveal d1">
+          <img src="Images/work-05-citibank.jpg" alt="Citibank" loading="lazy" />
+          <span class="work-grid-item-label">Citibank</span>
+        </div>
+        <div class="work-grid-item reveal d2">
+          <img src="Images/work-06-nubank.jpg" alt="Nu Bank" loading="lazy" />
+          <span class="work-grid-item-label">Nu Bank</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case studies — full-width alternating -->
+  <div class="case-carousel" id="caseCarousel">
+
+  <!-- 01 -->
+  <div class="case-slide active">
+    <div class="case-img">
+      <img src="Images/work-01-ritz-art-basel.jpg" alt="The New Current" loading="lazy" />
+    </div>
+    <div class="case-content">
+      <div class="case-num">01</div>
+      <div class="case-tags-row">Creative Direction · Cultural Platform · Miami Beach</div>
+      <h3 class="case-name">The New Current</h3>
+      <p class="case-client">Ritz-Carlton South Beach × Art Basel</p>
+      <div class="case-block">
+        <div class="case-block-label">The Brief</div>
+        <p class="case-block-text">The Ritz-Carlton South Beach needed an Art Basel presence with a real point of view — not another installation, but a cultural moment that reflected where the hotel is going.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-block-label">What We Ran</div>
+        <p class="case-block-text">Creative direction and concepting. Built The New Current — a platform connecting art, architecture, resilience, and the future of Miami Beach. Coordinated Loris Cecchini's sculpture from Italy to Miami. Curated artists: Marcel Van Luit, Loris Cecchini, Leandro Erlich, The Brave New Earth.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-block-label">The Results</div>
+        <p class="case-block-text">300M+ impressions across media and social.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 -->
+  <div class="case-slide">
+    <div class="case-img">
+      <img src="Images/work-02-miami-concours.jpg" alt="Miami Concours" loading="lazy" />
+    </div>
+    <div class="case-content">
+      <div class="case-num">02</div>
+      <div class="case-tags-row">Sponsor Activation · Luxury Events · Miami Design District</div>
+      <h3 class="case-name">Miami Concours</h3>
+      <p class="case-client">Miami Design District</p>
+      <div class="case-block">
+        <div class="case-block-label">The Brief</div>
+        <p class="case-block-text">46 sponsors. One premium event. Every partner with their own deliverables, timelines, and expectations converging on a single high-visibility moment.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-block-label">What We Ran</div>
+        <p class="case-block-text">Sponsor activation across the full roster — Lamborghini, Pagani, Lotus, Koenigsegg, Ralph Lauren, Moët Hennessy, Whispering Angel, and more. Operational bridge between sponsors, venue, production, and ticketing.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-block-label">The Results</div>
+        <p class="case-block-text">5,000+ people in one day. 10,000+ over the weekend.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 -->
+  <div class="case-slide">
+    <div class="case-img">
+      <img src="Images/work-03-moutoniere.jpg" alt="Moutonière" loading="lazy" />
+    </div>
+    <div class="case-content">
+      <div class="case-num">03</div>
+      <div class="case-tags-row">Production · Brand Launch · Partnerships · Miami</div>
+      <h3 class="case-name">Moutonière</h3>
+      <p class="case-client">The Standard Miami Beach</p>
+      <div class="case-block">
+        <div class="case-block-label">The Brief</div>
+        <p class="case-block-text">Moutonière needed to make the leap from early-stage brand to elevated lifestyle presence in Miami.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-block-label">What We Ran</div>
+        <p class="case-block-text">Month-long pop-up at The Standard, end to end. Secured the venue, executed the launch party, curated the guest list, designed every asset. Built the partner ecosystem — Ladurée, Whispering Angel, Riviera Dining Group.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-block-label">The Results</div>
+        <p class="case-block-text">$10,000+ in opening night sales. Followers grew 400% — from under 1,000 to 12,000 over the following year.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 -->
+  <div class="case-slide">
+    <div class="case-img">
+      <img src="Images/work-04-body-language.jpg" alt="Body Language" loading="lazy" />
+    </div>
+    <div class="case-content">
+      <div class="case-num">04</div>
+      <div class="case-tags-row">Wellness · Partnerships · Montauk, NY</div>
+      <h3 class="case-name">Body Language</h3>
+      <p class="case-client">The Surf Lodge</p>
+      <div class="case-block">
+        <div class="case-block-label">The Brief</div>
+        <p class="case-block-text">Body Language needed to show up at The Surf Lodge all summer and feel like it had always been part of the experience.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-block-label">What We Ran</div>
+        <p class="case-block-text">Partnerships, programming, and on-site direction every weekend through the season. Built the brand deck and visual identity. Brought in Bloom, De Soi, Celluma Red Light Therapy, Kin Euphorics.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 -->
+  <div class="case-slide">
+    <div class="case-img">
+      <img src="Images/work-05-citibank.jpg" alt="Citibank" loading="lazy" />
+    </div>
+    <div class="case-content">
+      <div class="case-num">05</div>
+      <div class="case-tags-row">Corporate Experiential · Miami</div>
+      <h3 class="case-name">Citibank</h3>
+      <p class="case-client">Networking Events</p>
+      <div class="case-block">
+        <div class="case-block-label">The Brief</div>
+        <p class="case-block-text">Four networking events for Citibank's private banking network — clients, executives, and prospects. Each one had to earn the next.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-block-label">What We Ran</div>
+        <p class="case-block-text">Full-scope event planning: venue scouting, budget management, event design, F&B operations, experience programming — sommelier game, live mentalist, live band.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 -->
+  <div class="case-slide">
+    <div class="case-img">
+      <img src="Images/work-06-nubank.jpg" alt="Nu Bank" loading="lazy" />
+    </div>
+    <div class="case-content">
+      <div class="case-num">06</div>
+      <div class="case-tags-row">Hospitality · Sports &amp; Culture · Miami</div>
+      <h3 class="case-name">Nu Bank</h3>
+      <p class="case-client">Inter Miami × Nu Stadium</p>
+      <div class="case-block">
+        <div class="case-block-label">The Brief</div>
+        <p class="case-block-text">Nu needed to bring its top clients to Miami for the inaugural match at Nu Stadium — Inter Miami vs. Austin FC.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-block-label">What We Ran</div>
+        <p class="case-block-text">End-to-end coordination: flights, hotel, ground transportation, curated meals, and the match-day experience. Every touchpoint built and run so guests only had to show up.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 07 -->
+  <div class="case-slide">
+    <div class="case-img">
+      <img src="Images/work-07-monaco-gp.jpg" alt="Monaco GP Experience" loading="lazy" />
+    </div>
+    <div class="case-content">
+      <div class="case-num">07</div>
+      <div class="case-tags-row">Sponsorship · F1 · Monaco</div>
+      <h3 class="case-name">Monaco GP Experience</h3>
+      <p class="case-client">Ritz-Carlton Yacht Collection × Imperial Moto</p>
+      <div class="case-block">
+        <div class="case-block-label">The Brief</div>
+        <p class="case-block-text">The Ritz-Carlton Yacht Collection docked in Monaco during Grand Prix week. The opportunity: turn the vessel into a brand platform and bring the right people onboard.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-block-label">What We Did</div>
+        <p class="case-block-text">Sponsorship sales — secured Ritz-Carlton Residences as an onboard sponsor through the Presidential Suite. Brought in Fredrik Eklund to cultivate UHNW guest relationships.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 08 -->
+  <div class="case-slide">
+    <div class="case-img">
+      <img src="Images/work-08-betplay.jpg" alt="BetPlay" loading="lazy" />
+    </div>
+    <div class="case-content">
+      <div class="case-num">08</div>
+      <div class="case-tags-row">Content · Multi-City Campaign · Miami · Orlando · New York · Washington</div>
+      <h3 class="case-name">BetPlay</h3>
+      <p class="case-client">Colombian National Team</p>
+      <div class="case-block">
+        <div class="case-block-label">The Brief</div>
+        <p class="case-block-text">BetPlay needed to show up live across four U.S. markets with same-day reels capturing each city's energy in real time.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-block-label">What We Ran</div>
+        <p class="case-block-text">Sourced and directed videographers in Miami, Orlando, New York, and Washington. Ran live capture, live editing, and live posting — 3 to 4 reels per game, every market, every week.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 09 -->
+  <div class="case-slide">
+    <div class="case-img">
+      <img src="Images/work-09-neiman-marcus.jpg" alt="Neiman Marcus" loading="lazy" />
+    </div>
+    <div class="case-content">
+      <div class="case-num">09</div>
+      <div class="case-tags-row">Luxury Hospitality · Experiential · Las Vegas</div>
+      <h3 class="case-name">Neiman Marcus</h3>
+      <p class="case-client">Las Vegas Grand Prix</p>
+      <div class="case-block">
+        <div class="case-block-label">The Brief</div>
+        <p class="case-block-text">Two activations for Neiman Marcus's top clients during the Las Vegas Grand Prix. UHNW guests who've seen everything.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-block-label">What We Did</div>
+        <p class="case-block-text">IMG Talent Cocktail Party, Race Styling Session, and Grand Prix Top Spender Experience. Hotel coordination, private transportation, curated dinner. Every touchpoint considered.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="case-slide">
+    <div class="case-img">
+      <img src="Images/work-10-actai-antigua.jpg" alt="Actai Antigua" loading="lazy" />
+    </div>
+    <div class="case-content">
+      <div class="case-num">10</div>
+      <div class="case-tags-row">Brand Identity · Creative Direction · Wellness Retreat</div>
+      <h3 class="case-name">Actai Antigua</h3>
+      <p class="case-client">Antigua and Barbuda</p>
+      <div class="case-block">
+        <div class="case-block-label">The Brief</div>
+        <p class="case-block-text">Actai partnered with Dr. Halland to launch a wellness retreat in Antigua. The retreat had the concept and the credentials. What it didn't have was a brand identity refined enough to match it.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-block-label">What We Did</div>
+        <p class="case-block-text">Built the custom branding and creative direction from the ground up. Designed the visual identity. Produced the deck. Defined the creative system for how the retreat showed up to participants, partners, and guests.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls bar -->
+  <div class="case-controls">
+    <div class="case-arrows">
+      <button class="case-arrow" id="casePrev" aria-label="Previous case study">&#8592;</button>
+      <button class="case-arrow" id="caseNext" aria-label="Next case study">&#8594;</button>
+    </div>
+    <div class="case-counter">
+      <span id="caseCurrentNum">01</span> / 10
+    </div>
+    <div class="case-dots" id="caseDots"></div>
+  </div>
+<!-- controls bar at the bottom -->
+<button class="case-arrow" id="casePrev">&#8592;</button>
+<button class="case-arrow" id="caseNext">&#8594;</button>
+<span id="caseCurrentNum">01</span>
+<div class="case-dots" id="caseDots"></div>
+
+</div><!-- /case-carousel -->
+
+
+
+  <!-- ═══════════════════════════════════════
+       SECTION 8 — MEET THE FOUNDER
+  ═══════════════════════════════════════ -->
+  <section id="founder">
+    <div class="wrap pad">
+      <div class="founder-grid">
+        <div class="founder-content">
+          <p class="founder-label reveal">Meet the founder</p>
+          <h2 class="founder-name reveal d1">Daniela Calderon</h2>
+          <div class="founder-bio">
+            <p class="reveal d2">A creative strategist born in Cali, Colombia and based in Miami. Drawn to fashion, music, art, and cultural experiences that make people feel something, she founded Doña to create work with emotional and cultural impact.</p>
+            <p class="reveal d3">Obsessed with storytelling through visuals, atmosphere, and connection, Daniela believes the smallest details shape the way a brand is remembered. Her work is rooted in creating the right energy, bringing the right people together, and building experiences that stay with you long after the moment ends.</p>
+          </div>
+        </div>
+        <div class="founder-img-wrap reveal-right">
+          <img src="Founder-Portrait.jpg"
+               alt="Daniela Calderon, Founder of Doña Creative Collective" />
+          <div class="founder-img-accent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 9 — HOW WE WORK
+  ═══════════════════════════════════════ -->
+ <section id="how">
+  <div class="how-inner">
+
+    <div class="how-header">
+      <p class="how-section-label">Process</p>
+      <h2 class="how-title">How We<br><em>Work</em></h2>
+    </div>
+
+    <div class="how-grid">
+
+      <div class="how-step">
+        <span class="how-step-number">01</span>
+        <p class="how-step-title">Embed</p>
+        <p class="how-step-body">
+          Doña becomes part of your team for the duration of the brief.
+          Embedded inside your operation, accountable to your goals —
+          not a vendor you manage, but a lead you trust.
+        </p>
+      </div>
+
+      <div class="how-step">
+        <span class="how-step-number">02</span>
+        <p class="how-step-title">Assemble</p>
+        <p class="how-step-body">
+          One lead takes the brief. The right specialists assemble around it —
+          industry experts, luxury brand consultants, creative collaborators,
+          and operators selected per project.
+        </p>
+      </div>
+
+      <div class="how-step">
+        <span class="how-step-number">03</span>
+        <p class="how-step-title">Execute</p>
+        <p class="how-step-body">
+          You get expert execution without the overhead. Every touchpoint
+          considered, every detail run — so you only have to show up.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- ═══════════════════════════════════════
+       SECTION 10 — CONTACT
+  ═══════════════════════════════════════ -->
+  <section id="contact">
+    <div class="wrap pad contact-inner">
+
+      <!-- Motif row -->
+      <div class="contact-motifs reveal">
+        <img src="LOGOS/LOGO.png"
+             alt="" aria-hidden="true"
+             style="mix-blend-mode: multiply; width: 80px;" />
+        <img src="MOTIFS/FAN MOTIF.png"
+             alt="" aria-hidden="true"
+             style="mix-blend-mode: screen; width: 64px; filter: brightness(0.65) sepia(0.2);" />
+        <img src="MOTIFS/LIONESS MOTIF.png"
+             alt="" aria-hidden="true"
+             style="mix-blend-mode: multiply; width: 70px;" />
+        <img src="MOTIFS/HAT MOTIF.png"
+             alt="" aria-hidden="true"
+             style="mix-blend-mode: multiply; width: 64px;" />
+      </div>
+
+      <div class="contact-rule reveal d1"></div>
+
+      <p class="contact-closing reveal d2">
+        If something here felt like it was written for you, it was.
+      </p>
+
+      <div class="contact-rule-2 reveal d3"></div>
+
+      <!-- Form -->
+      <div class="contact-form-wrap">
+        <div class="form-success" id="formSuccess">
+          Thank you — Daniela will be in touch shortly.
+        </div>
+
+        <form id="contactForm"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              class="reveal d3">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name"
+                     placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company"
+                     placeholder="Brand or company" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email"
+                   placeholder="your@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="project">Project / Opportunity</label>
+            <input type="text" id="project" name="project"
+                   placeholder="Tell us about the brief" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="budget">Budget Range</label>
+              <select id="budget" name="budget">
+                <option value="" disabled selected>Select a range</option>
+                <option value="under-10k">Under $10k</option>
+                <option value="10k-25k">$10k–$25k</option>
+                <option value="25k-50k">$25k–$50k</option>
+                <option value="50k+">$50k+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="timeline">Timeline</label>
+              <input type="text" id="timeline" name="timeline"
+                     placeholder="e.g. Q3 2025" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message"
+                      placeholder="What are you building?"></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Start a Conversation</button>
+        </form>
+      </div>
+
+      <!-- Direct email -->
+      <div class="contact-email-line reveal d4">
+        <p class="contact-email-label">Or reach out directly</p>
+        <a class="contact-email-link"
+           href="mailto:daniela@donacreative.com">daniela@donacreative.com</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <img class="footer-wordmark"
+         src="LOGOS/WORDMARK.png"
+         alt="Doña Creative Collective" />
+    <p class="footer-center">
+      © 2025 Doña Creative Collective · Miami, Florida
+    </p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </footer>
+
+  <!-- ─── SCRIPTS ─── -->
+  <script>
+    // ── Scroll reveal ──
+    const revealEls = document.querySelectorAll(
+      '.reveal, .reveal-left, .reveal-right'
+    );
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    // Trigger hero/manifesto on load
+    window.addEventListener('load', () => {
+      document.querySelectorAll('#manifesto .reveal').forEach(el => {
+        setTimeout(() => el.classList.add('visible'), 200);
+      });
+    });
+
+    // ── Navbar scroll ──
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 80);
+    }, { passive: true });
+
+    // ── Mobile menu ──
+    function openMobileMenu() {
+      document.getElementById('mobileMenu').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // ── Formspree AJAX submit ──
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        } else {
+          alert('Something went wrong. Please email daniela@donacreative.com directly.');
+        }
+      } catch {
+        alert('Something went wrong. Please email daniela@donacreative.com directly.');
+      }
+    });
+// ── Case study carousel ──
+(function() {
+  const carousel = document.getElementById('caseCarousel');
+  if (!carousel) return;
+
+  const slides  = carousel.querySelectorAll('.case-slide');
+  const dotsWrap = document.getElementById('caseDots');
+  const counter  = document.getElementById('caseCurrentNum');
+  const total    = slides.length;
+  let current    = 0;
+
+  if (total === 0) return;
+
+  // Make sure only slide 0 is active on load
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+  });
+  slides[0].classList.add('active');
+
+  // Build dots
+  if (dotsWrap) {
+    dotsWrap.innerHTML = '';
+    slides.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'case-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'Case study ' + (i + 1));
+      d.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(d);
+    });
+  }
+
+  function goTo(index) {
+    // Remove active from current
+    slides[current].classList.remove('active');
+    if (dotsWrap) dotsWrap.children[current].classList.remove('active');
+
+    // Update index
+    current = (index + total) % total;
+
+    // Add active to new
+    slides[current].classList.add('active');
+    if (dotsWrap) dotsWrap.children[current].classList.add('active');
+
+    // Update counter
+    if (counter) counter.textContent = String(current + 1).padStart(2, '0');
+  }
+
+  // Wire up buttons — find them inside the carousel
+  const prevBtn = document.getElementById('casePrev');
+  const nextBtn = document.getElementById('caseNext');
+
+  if (prevBtn) prevBtn.addEventListener('click', function() { goTo(current - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', function() { goTo(current + 1); });
+
+  // Keyboard
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight') goTo(current + 1);
+    if (e.key === 'ArrowLeft')  goTo(current - 1);
+  });
+
+  // Swipe support for mobile
+  let touchStartX = 0;
+  carousel.addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+  carousel.addEventListener('touchend', function(e) {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) goTo(current + 1);
+      else goTo(current - 1);
+    }
+  }, { passive: true });
+
+})();
+  </script>
+
+</body>
+</html>
